@@ -11,17 +11,16 @@ source:
 
 build:
   noarch: python
-  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
   host:
-    - python
+    - python >= 3.7
     - setuptools >=61.2
     - pip
   run:
-    - python
+    - python >= 3.7
     - aioshutil >=1,<2
     - pyparsing >=3,<4
     - typing_extensions >=4,<5

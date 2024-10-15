@@ -10,20 +10,20 @@ source:
   sha256: 7a08f60792296607bae4c878f1dba66aa485cfda7b9bcd5fd7b526ae423d18bf
 
 build:
-  skip: true  # [py<37]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools >=61.2
     - pip
   run:
-    - python
+    - python >=3.7
     - aioshutil >=1,<2
     - pyparsing >=3,<4
-    - typing_extensions >=4,<5  # [py<311]
+    - typing_extensions >=4,<5
 
 test:
   imports:

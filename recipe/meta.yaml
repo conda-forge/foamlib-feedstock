@@ -1,5 +1,5 @@
 {% set name = "foamlib" %}
-{% set version = "1.3.11" %}
+{% set version = "1.3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/foamlib-{{ version }}.tar.gz
-  sha256: 12d92e13dd0611a73d89007d45b1cfa916f113968e0641cbd7a986030fe3cde0
+  sha256: 3adb4d5f80fdf20c58470b2fe5e93354b9fe77a28019541f8aa8c832d19053bb
 
 build:
   noarch: python

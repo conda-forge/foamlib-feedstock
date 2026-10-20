@@ -1,5 +1,5 @@
 {% set name = "foamlib" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/foamlib-{{ version }}.tar.gz
-  sha256: 44af7467c176682c8401519e5a587a2b769bdd5b0f0ca2c3cd755dafe2b7fe01
+  sha256: 75fbc95e4e57cce279fc8005154c46378b43c8a634fc561c825ca35419a705ab
 
 build:
   noarch: python
@@ -18,15 +18,15 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv-build >=0.12,<0.13
+    - uv-build >=0.12,<0.14
     - pip
   run:
     - python >={{ python_min }}
     - aioshutil >=1,<2
-    - multicollections >=1.1.6,<2
-    - numpy >=1,<3
+    - multicollections >=2,<3
+    - numpy >=2,<3
     - rich >=13,<16
-    - typing_extensions >=4.13,<5
+    - typing_extensions >=4.14,<5
 
 test:
   imports:

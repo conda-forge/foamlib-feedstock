@@ -1,5 +1,5 @@
 {% set name = "foamlib" %}
-{% set version = "1.10.4" %}
+{% set version = "1.10.5" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/foamlib-{{ version }}.tar.gz
-  sha256: 3787a53fefd94a68243efc49e9cee93bc29bdd406a8240532251be46d9296fa5
+  sha256: cd93f8c8289b0ef6e620d2be201722c8554866796f4a1fa58595905ee55712e3
 
 build:
   noarch: python
